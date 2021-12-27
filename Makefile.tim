@@ -1,0 +1,117 @@
+all: \
+	iso/menu/menu.arc \
+	iso/menu/loading.tim \
+	iso/font/boldfont.tim \
+	iso/font/arial.tim \
+	iso/stage/hud0.tim \
+	iso/stage/hud1.tim \
+	iso/stage/hud0weeb.tim \
+	iso/bambi/main.arc \
+	iso/bambib/main.arc \
+	iso/bambic/main.arc \
+	iso/bambid/main.arc \
+	iso/bf/main.arc \
+	iso/bf/dead.arc \
+	iso/bf/weeb.arc \
+	iso/dave/main.arc \
+	iso/daveb/main.arc \
+	iso/davec/main.arc \
+	iso/daved/main.arc \
+	iso/cheat/main.arc \
+	iso/gf/main.arc \
+	iso/gf/tut.arc \
+	iso/gf/speaker.tim \
+	iso/unfair/main.arc \
+	iso/week0/back.arc \
+	iso/week1/back.arc \
+	iso/week2/back.arc \
+	iso/week3/back.arc \
+	iso/week4/back.arc \
+	iso/week4/hench.arc \
+	iso/week5/back.arc \
+	iso/week6/back.arc \
+	iso/week7/back.arc \
+	iso/week8/back.arc \
+	iso/week9/back.arc 
+
+iso/%.tim: iso/%.png
+	tools/funkintimconv/funkintimconv $@ $<
+
+iso/%.arc:
+	tools/funkinarcpak/funkinarcpak $@ $^
+
+# Menu
+iso/menu/menu.arc: iso/menu/back.tim iso/menu/ng.tim iso/menu/story.tim iso/menu/title.tim
+
+# BF
+iso/bf/main.arc: iso/bf/idle.tim iso/bf/hit0.tim iso/bf/miss0.tim iso/bf/hit1.tim iso/bf/miss1.tim iso/bf/peace.tim iso/bf/dead0.tim
+iso/bf/dead.arc: iso/bf/dead1.tim iso/bf/dead2.tim iso/bf/retry.tim
+iso/bf/weeb.arc: iso/bf/weeb0.tim iso/bf/weeb1.tim
+
+# Dave
+iso/dave/main.arc: iso/dave/idle0.tim iso/dave/idle1.tim iso/dave/idle2.tim iso/dave/idle3.tim iso/dave/idle4.tim iso/dave/idle5.tim iso/dave/idle6.tim iso/dave/left0.tim iso/dave/left1.tim iso/dave/left2.tim iso/dave/left3.tim iso/dave/down0.tim iso/dave/down1.tim iso/dave/down2.tim iso/dave/down3.tim iso/dave/up0.tim iso/dave/up1.tim iso/dave/up2.tim iso/dave/up3.tim iso/dave/right0.tim iso/dave/right1.tim iso/dave/right2.tim iso/dave/right3.tim
+
+# DaveB
+iso/daveb/main.arc: iso/daveb/idle0.tim iso/daveb/idle1.tim iso/daveb/idle2.tim iso/daveb/idle3.tim iso/daveb/idle4.tim iso/daveb/idle5.tim iso/daveb/idle6.tim iso/daveb/left0.tim iso/daveb/left1.tim iso/daveb/left2.tim iso/daveb/left3.tim iso/daveb/down0.tim iso/daveb/down1.tim iso/daveb/down2.tim iso/daveb/down3.tim iso/daveb/up0.tim iso/daveb/up1.tim iso/daveb/up2.tim iso/daveb/up3.tim iso/daveb/right0.tim iso/daveb/right1.tim iso/daveb/right2.tim iso/daveb/right3.tim
+
+# DaveC
+iso/davec/main.arc: iso/davec/idle0.tim iso/davec/idle1.tim iso/davec/idle2.tim iso/davec/idle3.tim iso/davec/idle4.tim iso/davec/idle5.tim iso/davec/idle6.tim iso/davec/left0.tim iso/davec/left1.tim iso/davec/left2.tim iso/davec/left3.tim iso/davec/down0.tim iso/davec/down1.tim iso/davec/down2.tim iso/davec/down3.tim iso/davec/up0.tim iso/davec/up1.tim iso/davec/up2.tim iso/davec/up3.tim iso/davec/right0.tim iso/davec/right1.tim iso/davec/right2.tim iso/davec/right3.tim
+
+# GF
+iso/gf/main.arc: iso/gf/bopleft.tim iso/gf/bopright.tim iso/gf/cry.tim iso/gf/gf0.tim iso/gf/gf1.tim iso/gf/gf2.tim
+iso/gf/tut.arc: iso/gf/tut0.tim iso/gf/tut1.tim
+
+# Bambi
+iso/bambi/main.arc: iso/bambi/idle0.tim iso/bambi/idle1.tim iso/bambi/idle2.tim iso/bambi/idle3.tim iso/bambi/idle4.tim iso/bambi/idle5.tim iso/bambi/idle6.tim iso/bambi/left0.tim iso/bambi/left1.tim iso/bambi/left2.tim iso/bambi/left3.tim iso/bambi/down0.tim iso/bambi/down1.tim iso/bambi/down2.tim iso/bambi/down3.tim iso/bambi/up0.tim iso/bambi/up1.tim iso/bambi/up2.tim iso/bambi/up3.tim iso/bambi/right0.tim iso/bambi/right1.tim iso/bambi/right2.tim iso/bambi/right3.tim
+
+# Unfair
+iso/unfair/main.arc: iso/unfair/idle0.tim iso/unfair/idle1.tim iso/unfair/idle2.tim iso/unfair/idle3.tim iso/unfair/left0.tim iso/unfair/left1.tim iso/unfair/left2.tim iso/unfair/down0.tim iso/unfair/down1.tim iso/unfair/down2.tim iso/unfair/up0.tim iso/unfair/up1.tim iso/unfair/up2.tim iso/unfair/right0.tim iso/unfair/right1.tim iso/unfair/right2.tim
+
+# Split
+iso/split/main.arc: iso/split/idlea0.tim iso/split/idlea1.tim iso/split/idlea2.tim iso/split/idlea3.tim iso/split/idlea4.tim iso/split/idleb0.tim iso/split/idleb1.tim iso/split/idleb2.tim iso/split/idleb3.tim iso/split/lefta0.tim iso/split/lefta1.tim iso/split/lefta2.tim iso/split/lefta3.tim iso/split/leftb0.tim iso/split/leftb1.tim iso/split/leftb2.tim iso/split/downa0.tim iso/split/downa1.tim iso/split/downa2.tim iso/split/downa3.tim iso/split/downb0.tim iso/split/downb1.tim iso/split/downb2.tim iso/split/upa0.tim iso/split/upa1.tim iso/split/upa2.tim iso/split/upa3.tim iso/split/upb0.tim iso/split/upb1.tim iso/split/upb2.tim iso/split/righta0.tim iso/split/righta1.tim iso/split/righta2.tim iso/split/righta3.tim iso/split/rightb0.tim iso/split/rightb1.tim iso/split/rightb2.tim
+
+# BambiB
+iso/bambib/main.arc: iso/bambib/idle0.tim iso/bambib/idle1.tim iso/bambib/idle2.tim iso/bambib/idle3.tim iso/bambib/left0.tim iso/bambib/left1.tim iso/bambib/down0.tim iso/bambib/down1.tim iso/bambib/up0.tim iso/bambib/up1.tim iso/bambib/right0.tim iso/bambib/right1.tim
+
+# Cheat
+iso/cheat/main.arc: iso/cheat/idle0.tim iso/cheat/idle1.tim iso/cheat/idle2.tim iso/cheat/left0.tim iso/cheat/left1.tim iso/cheat/down0.tim iso/cheat/down1.tim iso/cheat/up0.tim iso/cheat/up1.tim iso/cheat/right0.tim iso/cheat/right1.tim
+
+# DaveD
+iso/daved/main.arc: iso/daved/idle0.tim iso/daved/idle1.tim iso/daved/idle2.tim iso/daved/left0.tim iso/daved/left1.tim iso/daved/down0.tim iso/daved/down1.tim iso/daved/up0.tim iso/daved/up1.tim iso/daved/right0.tim iso/daved/right1.tim
+
+# BambiC
+iso/bambic/main.arc: iso/bambic/idle0.tim iso/bambic/idle1.tim iso/bambic/idle2.tim iso/bambic/idle3.tim iso/bambic/left0.tim iso/bambic/left1.tim iso/bambic/left2.tim iso/bambic/down0.tim iso/bambic/down1.tim iso/bambic/down2.tim iso/bambic/up0.tim iso/bambic/up1.tim iso/bambic/up2.tim iso/bambic/right0.tim iso/bambic/right1.tim
+
+# BambiD
+iso/bambid/main.arc: iso/bambid/idle0.tim iso/bambid/idle1.tim iso/bambid/idle2.tim iso/bambid/idle3.tim iso/bambid/left0.tim iso/bambid/left1.tim iso/bambid/left2.tim iso/bambid/left3.tim iso/bambid/down0.tim iso/bambid/down1.tim iso/bambid/down2.tim iso/bambid/down3.tim iso/bambid/up0.tim iso/bambid/up1.tim iso/bambid/up2.tim iso/bambid/up3.tim iso/bambid/right0.tim iso/bambid/right1.tim iso/bambid/right2.tim iso/bambid/right3.tim
+
+# Week 0
+iso/week0/back.arc: iso/week0/back0.tim iso/week0/back1.tim iso/week0/back2.tim
+
+# Week 1
+iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim
+
+# Week 2
+iso/week2/back.arc: iso/week2/back0.tim iso/week2/back1.tim iso/week2/back2.tim
+
+# Week 3
+iso/week3/back.arc: iso/week3/back0.tim iso/week3/back1.tim iso/week3/back2.tim
+
+# Week 4
+iso/week4/back.arc: iso/week4/back0.tim iso/week4/back1.tim iso/week4/back2.tim
+iso/week4/hench.arc: iso/week4/hench0.tim iso/week4/hench1.tim
+
+# Week 5
+iso/week5/back.arc: iso/week5/back0.tim iso/week5/back1.tim iso/week5/back2.tim
+
+# Week 6
+iso/week6/back.arc: iso/week6/back0.tim iso/week6/back1.tim iso/week6/back2.tim
+
+# Week 7
+iso/week7/back.arc: iso/week7/back0.tim iso/week7/back1.tim iso/week7/back2.tim iso/week7/back3.tim
+
+# Week 8
+iso/week8/back.arc: iso/week8/back0.tim iso/week8/back1.tim iso/week8/back2.tim
+
+# Week 9
+iso/week9/back.arc: iso/week9/back0.tim iso/week9/back1.tim iso/week9/back2.tim

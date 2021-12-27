@@ -1,0 +1,4 @@
+1 xa stressv.xa 1 0
+1 xa stressi.xa 1 1
+1 xa secretv.xa 1 2
+1 xa secreti.xa 1 3
