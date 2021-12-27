@@ -145,7 +145,7 @@ Character *Char_Unfair_New(fixed_t x, fixed_t y)
 	Character_Init((Character*)this, x, y);
 	
 	//Set character stage information
-	this->character.health_i = 13;
+	this->character.health_i = 11;
 	
 	this->character.focus_x = FIXED_DEC(25,1);
 	this->character.focus_y = FIXED_DEC(-90,1);
